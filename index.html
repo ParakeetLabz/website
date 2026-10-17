@@ -86,6 +86,19 @@
   .reveal.in{opacity:1;transform:none}
   .reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
 
+  /* lab notes timeline */
+  .timeline{position:relative;margin-top:8px;padding-left:28px}
+  .timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;
+        background:linear-gradient(var(--cyan),var(--blue));border-radius:2px;opacity:.5}
+  .note{position:relative;background:var(--card);border:1px solid #1c3355;border-radius:16px;
+        padding:22px 26px;margin-bottom:18px;transition:transform .2s,border-color .2s}
+  .note::before{content:"";position:absolute;left:-26px;top:28px;width:12px;height:12px;border-radius:50%;
+        background:var(--cyan);box-shadow:0 0 12px rgba(0,212,255,.8);animation:pulse 2.4s ease-in-out infinite}
+  .note:hover{transform:translateX(6px);border-color:var(--cyan)}
+  .note-date{color:var(--muted);font-size:.85rem;font-weight:600;letter-spacing:.5px;margin:6px 0 4px}
+  .note h3{font-size:1.15rem;margin-bottom:6px}
+  .note p{color:var(--muted);margin:0}
+
   footer{text-align:center;padding:40px 24px;color:var(--muted);border-top:1px solid #1c3355;font-size:.95rem}
   footer .org{display:inline-flex;align-items:center;gap:8px;margin-top:10px}
   @media(max-width:640px){.links{gap:12px;font-size:.9rem}}
@@ -107,6 +120,7 @@
     <a href="#parakeet">Parakeet</a>
     <a href="#zgames">Z Games</a>
     <a href="#upcoming">Upcoming</a>
+    <a href="#labnotes">Lab Notes</a>
     <a href="#about">About</a>
     <a class="btn small" href="https://github.com/ParakeetLabz" target="_blank" rel="noopener">GitHub</a>
   </div>
@@ -179,6 +193,45 @@
       <span class="tag soon">Coming soon</span>
       <h3>FlockBuilder</h3>
       <p>A game engine for building browser games from scratch — the tech that will power the next wave of Z Games titles.</p>
+    </div>
+  </div>
+</section>
+
+<section id="labnotes" style="background:var(--bg2);max-width:none">
+  <div style="max-width:1080px;margin:0 auto">
+    <h2 class="reveal">Lab Notes</h2>
+    <p class="sub reveal">A running changelog of what we've been building and shipping.</p>
+    <div class="timeline">
+      <div class="note reveal">
+        <span class="tag live">Website</span>
+        <div class="note-date">Oct 17, 2026</div>
+        <h3>parakeetlabz.vercel.app is live</h3>
+        <p>Our new home on the web: fully animated, a bird-only logo, and a window into everything we're building — Parakeet, Z Games, and what's next.</p>
+      </div>
+      <div class="note reveal">
+        <span class="tag live">Parakeet</span>
+        <div class="note-date">Oct 17, 2026</div>
+        <h3>Parakeet v2: tab cloaking, terminal, and Pip</h3>
+        <p>Tab cloaking presets (Classroom, Drive, Gmail and more), a built-in web terminal on Ctrl+`, the Pip the Parakeet mascot, and parakeet:// internal pages with a proper secure lock icon.</p>
+      </div>
+      <div class="note reveal">
+        <span class="tag live">Parakeet</span>
+        <div class="note-date">Oct 17, 2026</div>
+        <h3>ParakeetProxy joins the ParakeetLabz org</h3>
+        <p>The project moved to its own GitHub organization at github.com/ParakeetLabz/ParakeetProxy — open source, as always.</p>
+      </div>
+      <div class="note reveal">
+        <span class="tag live">Parakeet</span>
+        <div class="note-date">Oct 16, 2026</div>
+        <h3>GUST becomes Parakeet</h3>
+        <p>Full rebrand: new name, blue/cyan theme, and the cyan parakeet bird logo that started it all.</p>
+      </div>
+      <div class="note reveal">
+        <span class="tag live">Z Games</span>
+        <div class="note-date">Oct 2026</div>
+        <h3>25 games and counting</h3>
+        <p>The Z Games hub grew with 25 new titles, plus fresh square icons across the whole catalog.</p>
+      </div>
     </div>
   </div>
 </section>
