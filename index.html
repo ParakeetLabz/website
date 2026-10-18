@@ -161,6 +161,7 @@ section{padding:clamp(60px,8vw,110px) clamp(18px,6vw,90px);max-width:1200px;marg
 .card.c3{--stripe:linear-gradient(90deg,#22c55e,#4ade80)}
 .card.c4{--stripe:linear-gradient(90deg,#ef4444,#f97316)}
 .card.c5{--stripe:linear-gradient(90deg,#f59e0b,#fbbf24)}
+.card.c6{--stripe:linear-gradient(90deg,#d97600,#b26a00)}
 .card .shine{
   position:absolute;top:0;left:-80%;width:60%;height:100%;pointer-events:none;
   background:linear-gradient(100deg,transparent,rgba(0,169,216,.08),transparent);
@@ -174,11 +175,12 @@ section{padding:clamp(60px,8vw,110px) clamp(18px,6vw,90px);max-width:1200px;marg
 }
 .card.c1{--tile:rgba(0,169,216,.13)} .card.c2{--tile:rgba(123,47,247,.12)}
 .card.c3{--tile:rgba(34,197,94,.13)} .card.c4{--tile:rgba(239,68,68,.11)}
-.card.c5{--tile:rgba(245,158,11,.14)}
+.card.c5{--tile:rgba(245,158,11,.14)} .card.c6{--tile:rgba(217,118,0,.13)}
 .card:hover .icon{transform:scale(1.1) rotate(-6deg)}
 .icon svg{width:30px;height:30px;stroke:var(--cyan-deep);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .card.c2 .icon svg{stroke:#7b2ff7}.card.c3 .icon svg{stroke:#16a34a}
 .card.c4 .icon svg{stroke:#dc2626}.card.c5 .icon svg{stroke:#d97706}
+.card.c6 .icon svg{stroke:#b26a00}
 .card h3{font-size:1.35rem;margin-bottom:8px;color:var(--ink)}
 .card .tag{
   display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;
@@ -568,39 +570,6 @@ try{var _t=localStorage.getItem("pl_theme")||"light";document.documentElement.se
 </script>
 
 
-<style id="theme-tales">
-/* ---------- tales of the flock (storybook, works in both themes) ---------- */
-.storybook{max-width:740px;margin:0 auto;position:relative;
-  background:linear-gradient(180deg,#fffdf4 0%,#fff3d6 100%);
-  border-radius:26px;padding:52px 42px 32px;color:#3d2f16;
-  box-shadow:0 24px 70px rgba(11,30,58,.22), inset 0 0 60px rgba(255,149,0,.06);
-  border:1px solid rgba(210,150,60,.35);overflow:hidden}
-.storybook::before{content:"";position:absolute;top:0;right:46px;width:34px;height:66px;
-  background:linear-gradient(180deg,#ff9500,#d97600);
-  clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%)}
-.story-page{display:none;text-align:center;animation:pageIn .45s ease}
-.story-page.active{display:block}
-@keyframes pageIn{from{opacity:0;transform:translateX(46px)}to{opacity:1;transform:none}}
-@keyframes storyBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.story-chapter{font-size:.74rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#b26a00;margin-bottom:14px}
-.story-emoji{font-size:3.6rem;display:block;margin-bottom:16px;animation:storyBob 4.5s ease-in-out infinite}
-.storybook h3{font-size:1.65rem;color:#2c2110;margin-bottom:14px;letter-spacing:-.3px}
-.storybook p.tale{color:#6d5a37;line-height:1.85;max-width:540px;margin:0 auto 24px;font-size:1.02rem}
-.story-link{display:inline-block;padding:11px 26px;border-radius:999px;font-weight:800;font-size:.92rem;
-  text-decoration:none;color:#fff;background:linear-gradient(135deg,#f5a623,#d97600);
-  box-shadow:0 8px 22px rgba(217,118,0,.35);transition:transform .25s,box-shadow .25s}
-.story-link:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 12px 28px rgba(217,118,0,.45)}
-.story-nav{display:flex;align-items:center;justify-content:space-between;margin-top:30px;gap:10px}
-.story-btn{background:#fffdf4;border:2px solid rgba(178,106,0,.4);color:#7a5200;font-weight:800;
-  padding:10px 22px;border-radius:999px;cursor:pointer;font-size:.92rem;font-family:inherit;transition:all .25s ease}
-.story-btn:hover:not(:disabled){background:#b26a00;border-color:#b26a00;color:#fff;transform:translateY(-2px)}
-.story-btn:disabled{opacity:.35;cursor:default}
-.story-dots{display:flex;gap:9px;align-items:center}
-.story-dot{width:11px;height:11px;border-radius:50%;border:none;padding:0;cursor:pointer;
-  background:rgba(122,82,0,.22);transition:all .25s ease}
-.story-dot.active{background:#d97600;transform:scale(1.3);box-shadow:0 0 10px rgba(217,118,0,.5)}
-@media(max-width:560px){.storybook{padding:44px 24px 28px}.story-btn{padding:9px 15px;font-size:.85rem}}
-</style>
 </head>
 <body>
 <canvas id="stars"></canvas>
@@ -615,7 +584,6 @@ try{var _t=localStorage.getItem("pl_theme")||"light";document.documentElement.se
   </a>
   <div class="navlinks">
     <a href="#products">Products</a>
-    <a href="#tales">Tales</a>
     <a href="#upcoming">Upcoming</a>
     <a href="#labnotes">Lab Notes</a>
     <a href="#about">About</a>
@@ -643,7 +611,7 @@ try{var _t=localStorage.getItem("pl_theme")||"light";document.documentElement.se
   <section id="products">
     <div class="sec-head reveal">
       <h2>Our Flock</h2>
-      <p>Everything we've hatched so far — live, playable, and free in your browser. FunTopia, Epoch, and FunWorxs just joined the flock.</p>
+      <p>Everything we've hatched so far — live and free in your browser, including our official webcomic. FunTopia, Epoch, and FunWorxs just joined the flock.</p>
     </div>
     <div class="grid">
       <div class="card c1 reveal">
@@ -696,66 +664,19 @@ try{var _t=localStorage.getItem("pl_theme")||"light";document.documentElement.se
           <a class="chip solid" href="https://funworxs.onrender.com" target="_blank" rel="noopener">Start chatting</a>
         </div>
       </div>
-    </div>
-  </section>
-
-
-  <!-- TALES -->
-  <section id="tales">
-    <div class="sec-head reveal">
-      <h2>Tales of the Flock</h2>
-      <p>Every flock has a story. Here are ours — flip through the chapters.</p>
-    </div>
-    <div class="storybook reveal" id="storybook">
-      <div class="story-page active">
-        <div class="story-chapter">Chapter One</div>
-        <span class="story-emoji">🥚</span>
-        <h3>Z Games Started the Flock</h3>
-        <p class="tale">Long before there was a lab, there was a study page that wasn't a study page at all. Behind a calculator and a magic phrase hid an arcade of 25 games — and the flock's very first feather.</p>
-        <a class="story-link" href="https://studingplace.vercel.app" target="_blank" rel="noopener">Play Z Games</a>
-      </div>
-      <div class="story-page">
-        <div class="story-chapter">Chapter Two</div>
-        <span class="story-emoji">🕊</span>
-        <h3>Parakeet Joined the Flock</h3>
-        <p class="tale">The flock needed wings to fly past every block on the internet. So Parakeet arrived — a proxy with tab cloaking, a built-in terminal, and a small blue bird named Pip who simply refused to leave.</p>
-        <a class="story-link" href="https://iaccidentalysleepedat7am.vercel.app/" target="_blank" rel="noopener">Launch Parakeet</a>
-      </div>
-      <div class="story-page">
-        <div class="story-chapter">Chapter Three</div>
-        <span class="story-emoji">🧱</span>
-        <h3>FunTopia Joined the Flock</h3>
-        <p class="tale">Millions of blocky adventurers needed somewhere to roam. FunTopia opened its gates — jump into games, customize your avatar, and build whole worlds in Funtopia Studio.</p>
-        <a class="story-link" href="https://friendfun.onrender.com" target="_blank" rel="noopener">Enter FunTopia</a>
-      </div>
-      <div class="story-page">
-        <div class="story-chapter">Chapter Four</div>
-        <span class="story-emoji">⚡</span>
-        <h3>Epoch Joined the Flock</h3>
-        <p class="tale">Then came the thunder. Epoch crashed in with lightning in its veins — a Metallica-fueled battle royale beneath a blood-red storm, where the only rule is RIDE THE LIGHTNING.</p>
-        <a class="story-link" href="https://shootergame-y1i9.onrender.com/" target="_blank" rel="noopener">Drop into Epoch</a>
-      </div>
-      <div class="story-page">
-        <div class="story-chapter">Chapter Five</div>
-        <span class="story-emoji">💬</span>
-        <h3>FunWorxs Joined the Flock</h3>
-        <p class="tale">A flock that can't talk isn't a flock at all. FunWorxs gave every bird a voice — chat with your people, signing in with Google or your FunTopia account.</p>
-        <a class="story-link" href="https://funworxs.onrender.com" target="_blank" rel="noopener">Start chatting</a>
-      </div>
-      <div class="story-page">
-        <div class="story-chapter">Chapter Six</div>
-        <span class="story-emoji">🔮</span>
-        <h3>To Be Continued…</h3>
-        <p class="tale">FlockBuilder is still in its egg — a game engine that will power the next wave of Z Games tales. The flock keeps growing, and every legend starts with a single feather.</p>
-        <a class="story-link" href="#upcoming">Peek at what's next</a>
-      </div>
-      <div class="story-nav">
-        <button class="story-btn" id="tale-prev">← Prev</button>
-        <div class="story-dots" id="story-dots"></div>
-        <button class="story-btn" id="tale-next">Next →</button>
+      <div class="card c6 reveal">
+        <div class="shine"></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div>
+        <span class="tag">Webcomic</span>
+        <h3>Tales of the Flock</h3>
+        <p>The official webcomic of Parakeet Labz. Follow Pip from the Sunny Meadow to the Sunset Cliffs — and straight into the wings of the Night Boss.</p>
+        <div class="links">
+          <a class="chip solid" href="https://tales-of-the-flock-zteam4.vercel.app/" target="_blank" rel="noopener">Read Episode 1</a>
+        </div>
       </div>
     </div>
   </section>
+
 
   <!-- UPCOMING -->
   <section id="upcoming">
@@ -779,9 +700,9 @@ try{var _t=localStorage.getItem("pl_theme")||"light";document.documentElement.se
     </div>
     <div class="timeline">
       <div class="note reveal">
-        <div class="date">Oct 17, 2026 · Website</div>
-        <h4>Tales of the Flock</h4>
-        <p>A storybook page for the flock's legends — flip through how each member joined, from Z Games to FunWorxs.</p>
+        <div class="date">Oct 17, 2026 · Tales of the Flock</div>
+        <h4>The official webcomic joins the site</h4>
+        <p>Follow Pip from the Sunny Meadow to the Sunset Cliffs — Tales of the Flock, our official webcomic, is now on the flock page.</p>
       </div>
       <div class="note reveal">
         <div class="date">Oct 17, 2026 · Website</div>
@@ -1016,50 +937,6 @@ if(themeToggle) themeToggle.addEventListener('click',()=>{
   siteTheme = siteTheme==='dark' ? 'light' : 'dark';
   applyTheme();
 });
-
-
-/* ---------- tales of the flock storybook ---------- */
-(function(){
-  const pages=Array.from(document.querySelectorAll('.story-page'));
-  const dotsWrap=document.getElementById('story-dots');
-  const prev=document.getElementById('tale-prev'), next=document.getElementById('tale-next');
-  const book=document.getElementById('storybook');
-  if(!pages.length||!dotsWrap) return;
-  let idx=0, touchX=null, bookVisible=false;
-  pages.forEach((_,i)=>{
-    const d=document.createElement('button');
-    d.className='story-dot'+(i===0?' active':'');
-    d.setAttribute('aria-label','Go to tale '+(i+1));
-    d.addEventListener('click',()=>showTale(i));
-    dotsWrap.appendChild(d);
-  });
-  const dots=Array.from(dotsWrap.children);
-  function showTale(i, silent){
-    idx=(i+pages.length)%pages.length;
-    pages.forEach((p,k)=>p.classList.toggle('active',k===idx));
-    dots.forEach((d,k)=>d.classList.toggle('active',k===idx));
-    if(prev) prev.disabled = idx===0;
-    if(next) next.disabled = idx===pages.length-1;
-    if(!silent && !birdMuted) sndChirp();
-  }
-  if(prev) prev.addEventListener('click',()=>showTale(idx-1));
-  if(next) next.addEventListener('click',()=>showTale(idx+1));
-  if(book){
-    book.addEventListener('touchstart',e=>{touchX=e.touches[0].clientX;},{passive:true});
-    book.addEventListener('touchend',e=>{
-      if(touchX===null) return;
-      const dx=e.changedTouches[0].clientX-touchX; touchX=null;
-      if(dx<-45) showTale(idx+1); else if(dx>45) showTale(idx-1);
-    },{passive:true});
-    new IntersectionObserver(es=>{bookVisible=es[0].isIntersecting;},{threshold:.3}).observe(book);
-  }
-  addEventListener('keydown',e=>{
-    if(!bookVisible) return;
-    if(e.key==='ArrowRight') showTale(idx+1);
-    else if(e.key==='ArrowLeft') showTale(idx-1);
-  });
-  showTale(0, true);
-})();
 
 </script>
 </body>
