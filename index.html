@@ -162,6 +162,8 @@ section{padding:clamp(60px,8vw,110px) clamp(18px,6vw,90px);max-width:1200px;marg
 .card.c4{--stripe:linear-gradient(90deg,#ef4444,#f97316)}
 .card.c5{--stripe:linear-gradient(90deg,#f59e0b,#fbbf24)}
 .card.c6{--stripe:linear-gradient(90deg,#d97600,#b26a00)}
+.card.c7{--stripe:linear-gradient(90deg,#2563eb,#60a5fa)}
+.card.c8{--stripe:linear-gradient(90deg,#8b5cf6,#6d28d9)}
 .card .shine{
   position:absolute;top:0;left:-80%;width:60%;height:100%;pointer-events:none;
   background:linear-gradient(100deg,transparent,rgba(0,169,216,.08),transparent);
@@ -176,11 +178,14 @@ section{padding:clamp(60px,8vw,110px) clamp(18px,6vw,90px);max-width:1200px;marg
 .card.c1{--tile:rgba(0,169,216,.13)} .card.c2{--tile:rgba(123,47,247,.12)}
 .card.c3{--tile:rgba(34,197,94,.13)} .card.c4{--tile:rgba(239,68,68,.11)}
 .card.c5{--tile:rgba(245,158,11,.14)} .card.c6{--tile:rgba(217,118,0,.13)}
+.card.c7{--tile:rgba(37,99,235,.12)} .card.c8{--tile:rgba(124,58,237,.13)}
 .card:hover .icon{transform:scale(1.1) rotate(-6deg)}
 .icon svg{width:30px;height:30px;stroke:var(--cyan-deep);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .card.c2 .icon svg{stroke:#7b2ff7}.card.c3 .icon svg{stroke:#16a34a}
 .card.c4 .icon svg{stroke:#dc2626}.card.c5 .icon svg{stroke:#d97706}
 .card.c6 .icon svg{stroke:#b26a00}
+.card.c7 .icon svg{stroke:#1d4ed8}
+.card.c8 .icon svg{stroke:#6d28d9}
 .card h3{font-size:1.35rem;margin-bottom:8px;color:var(--ink)}
 .card .tag{
   display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;
@@ -584,7 +589,6 @@ try{var _t=localStorage.getItem("pl_theme")||"light";document.documentElement.se
   </a>
   <div class="navlinks">
     <a href="#products">Products</a>
-    <a href="#upcoming">Upcoming</a>
     <a href="#labnotes">Lab Notes</a>
     <a href="#about">About</a>
     <a href="#pip">Pip</a>
@@ -611,7 +615,7 @@ try{var _t=localStorage.getItem("pl_theme")||"light";document.documentElement.se
   <section id="products">
     <div class="sec-head reveal">
       <h2>Our Flock</h2>
-      <p>Everything we've hatched so far — live and free in your browser, including our official webcomic. FunTopia, Epoch, and FunWorxs just joined the flock.</p>
+      <p>Everything we've hatched so far — live and free in your browser, including our official webcomic. FunTopia, Epoch, FunWorxs, FlockBuilder, and Moon just joined the flock.</p>
     </div>
     <div class="grid">
       <div class="card c1 reveal">
@@ -674,23 +678,30 @@ try{var _t=localStorage.getItem("pl_theme")||"light";document.documentElement.se
           <a class="chip solid" href="tales.html">Read Episode 1</a>
         </div>
       </div>
+      <div class="card c7 reveal">
+        <div class="shine"></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4L14 13l-3-3 3.7-3.7z"/></svg></div>
+        <span class="tag">Game engine</span>
+        <h3>FlockBuilder</h3>
+        <p>Build browser games from scratch — visual WHEN → THEN rules, the PLL scripting language, and one-click publishing to a standalone HTML5 game file.</p>
+        <div class="links">
+          <a class="chip solid" href="https://flockbuilder-zteam4.vercel.app" target="_blank" rel="noopener">Open FlockBuilder</a>
+          <a class="chip" href="https://github.com/ParakeetLabz/FlockBuilder" target="_blank" rel="noopener">View source</a>
+        </div>
+      </div>
+      <div class="card c8 reveal">
+        <div class="shine"></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div>
+        <span class="tag">Web proxy</span>
+        <h3>Moon</h3>
+        <p>A pure-ScramJet proxy under a night sky. Live moon-phase readout, glowing crescent brand, and WISP relays with fast-mode blocking.</p>
+        <div class="links">
+          <a class="chip solid" href="https://theamazingfieldtriptonowhere.vercel.app/" target="_blank" rel="noopener">Launch Moon</a>
+        </div>
+      </div>
     </div>
   </section>
 
-
-  <!-- UPCOMING -->
-  <section id="upcoming">
-    <div class="sec-head reveal">
-      <h2>Upcoming Projects</h2>
-      <p>What's cooking in the lab right now.</p>
-    </div>
-    <div class="up-card reveal">
-      <div class="icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4L14 13l-3-3 3.7-3.7z"/></svg></div>
-      <h3>FlockBuilder</h3>
-      <p>A game engine for building browser games from scratch — visual scripting, physics, and one-click publishing. It's the tech that will power the next wave of Z Games titles.</p>
-      <span class="soon">Coming soon</span>
-    </div>
-  </section>
 
   <!-- LAB NOTES -->
   <section id="labnotes">
@@ -699,6 +710,16 @@ try{var _t=localStorage.getItem("pl_theme")||"light";document.documentElement.se
       <p>The changelog — everything new, fresh out of the nest.</p>
     </div>
     <div class="timeline">
+      <div class="note reveal">
+        <div class="date">Oct 18, 2026 · Moon</div>
+        <h4>Moon joined the flock</h4>
+        <p>Our pure-ScramJet proxy rises — night-sky theme, live moon-phase readout, and WISP relays with fast-mode blocking.</p>
+      </div>
+      <div class="note reveal">
+        <div class="date">Oct 17, 2026 · FlockBuilder</div>
+        <h4>FlockBuilder v0.1.0 is live</h4>
+        <p>Our game engine hatched: visual WHEN → THEN rules, the PLL scripting language, and one-click publishing to a standalone HTML5 game file.</p>
+      </div>
       <div class="note reveal">
         <div class="date">Oct 17, 2026 · Tales of the Flock</div>
         <h4>The official webcomic joins the site</h4>
